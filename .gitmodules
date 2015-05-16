@@ -1,0 +1,3 @@
+[submodule "lame_src"]
+	path = lame_src
+	url = https://github.com/rbrito/lame
