@@ -1,7 +1,7 @@
 {
 	'variables':{
-		'library' : 'static_library',
-		#'library' : 'shared_library',
+		#'library' : 'static_library',
+		'library' : 'shared_library',
 	},
 	
 	'target_defaults': {
@@ -101,7 +101,17 @@
 				'HAVE_CONFIG_H',
 			],
 			
+			'copies':[
+				{
+					'destination':'include/lame',
+					'files':[
+						'lame_src/include/lame.h',
+					],
+				},
+			],
+			
 			'include_dirs':[
+				'include',
 				'lame_src/include',
 				'lame_src/libmp3lame',
 				'lame_src/mpglib',
@@ -109,6 +119,7 @@
 			],
 			'direct_dependent_settings': {
 				'include_dirs': [
+					'include',
 					'lame_src/include',
 					'lame_src/libmp3lame',
 					
