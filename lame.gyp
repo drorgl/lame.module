@@ -94,7 +94,7 @@
 	
 	'targets':[
 		{
-			'target_name': 'mp3lame',
+			'target_name': 'libmp3lame',
 			'type':'<(library)',
 			
 			'defines':[
@@ -222,7 +222,7 @@
 		{
 		  'target_name': 'test',
 		  'type': 'executable',
-		  'dependencies': [ 'mp3lame' ],
+		  'dependencies': [ 'libmp3lame' ],
 		  'sources': [ 'test.c' ]
 		},
 	
@@ -236,7 +236,7 @@
 					'target_name':'lame_test',
 					'type':'executable',
 					'dependencies':[
-						'mp3lame',
+						'libmp3lame',
 					],
 					'sources':[
 						'lame_src/test/lame_test.cpp',
@@ -254,7 +254,7 @@
 						'config/<(OS)/<(target_arch)',
 					],
 					'dependencies':[
-						'mp3lame',
+						'libmp3lame',
 					],
 					'sources':[
 						'lame_src/frontend/main.c',
@@ -302,7 +302,7 @@
 						'config/<(OS)/<(target_arch)',
 					],
 					'dependencies':[
-						'mp3lame',
+						'libmp3lame',
 					],
 					'sources':[
 						'lame_src/frontend/amiga_mpega.c',
