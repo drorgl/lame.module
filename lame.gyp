@@ -100,7 +100,7 @@
 			'defines':[
 				'HAVE_CONFIG_H',
 			],
-			
+			'hard_dependency': 1,
 			'copies':[
 				{
 					'destination':'include/lame',
