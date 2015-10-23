@@ -15,9 +15,46 @@
 			},
 		},
 		'configurations':{
-			'Debug':{},
-			'Release':{},
+			'Debug':{
+				'conditions': [
+				  ['target_arch=="x64"', {
+					'msvs_configuration_platform': 'x64',
+				  }],
+				],
+				'defines':[
+					'DEBUG',
+				],
+				'msvs_settings': {				
+					'VCLinkerTool' : {
+						'GenerateDebugInformation' : 'true',
+						'conditions':[
+							['target_arch=="x64"', {
+								'TargetMachine' : 17 # /MACHINE:X64
+							}],
+						],
+						
+					}
+				}
+			},
+			'Release':{
+				'conditions': [
+				  ['target_arch=="x64"', {
+					'msvs_configuration_platform': 'x64',
+				  }],
+				],
+				'msvs_settings': {				
+					'VCLinkerTool' : {
+						'conditions':[
+							['target_arch=="x64"', {
+								'TargetMachine' : 17 # /MACHINE:X64
+							}],
+						],
+						
+					}
+				}
+			},
 		},
+		
 		'conditions': [
 			['OS=="linux" and target_arch=="ia32"',{
 				'cflags':[
