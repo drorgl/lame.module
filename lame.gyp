@@ -147,7 +147,7 @@
 				},
 			],
 			
-			'include_dirs':[
+			'include_dirs+':[
 				'include',
 				'lame_src/include',
 				'lame_src/libmp3lame',
@@ -155,7 +155,7 @@
 				'config/<(OS)/<(target_arch)',
 			],
 			'direct_dependent_settings': {
-				'include_dirs': [
+				'include_dirs+': [
 					'include',
 					'lame_src/include',
 					'lame_src/libmp3lame',
@@ -287,7 +287,7 @@
 					'defines':[
 						'HAVE_CONFIG_H',
 					],
-					'include_dirs':[
+					'include_dirs+':[
 						'config/<(OS)/<(target_arch)',
 					],
 					'dependencies':[
@@ -335,7 +335,7 @@
 					'defines':[
 						'HAVE_CONFIG_H',
 					],
-					'include_dirs':[
+					'include_dirs+':[
 						'config/<(OS)/<(target_arch)',
 					],
 					'dependencies':[
