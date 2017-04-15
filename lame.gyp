@@ -10,8 +10,7 @@
 			# This magical incantation is necessary because VC++ will compile
 			# object files to same directory... even if they have the same name!
 			'VCCLCompilerTool': {
-			  'ObjectFile': '$(IntDir)/%(RelativeDir)/',
-			  'AdditionalOptions': ['/w']
+			  'ObjectFile': '$(IntDir)/%(RelativeDir)/'
 			},
 		},
 		'configurations':{
