@@ -1,0 +1,3 @@
+{
+    "includes":["lame.gyp"]
+}
